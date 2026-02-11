@@ -113,7 +113,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="text-center py-6 text-sm text-gray-500">
-        Built with 🌱 by <a href="https://your-portfolio.com" className="underline text-green-600">Nishit Sharma</a>
+        Built with 🌱 by <a href="https://portfolio-nishit-nine.vercel.app/" className="underline text-green-600">Nishit Sharma</a>
       </footer>
     </div>
   )

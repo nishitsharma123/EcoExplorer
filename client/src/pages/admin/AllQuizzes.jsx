@@ -9,7 +9,8 @@ export default function AllQuizzes() {
     const fetchQuizzes = async () => {
       try {
         const token = localStorage.getItem('token')
-        const res = await axios.get('http://localhost:5000/api/admin/quizzes', {
+        // const res = await axios.get('http://localhost:5000/api/admin/quizzes', {
+        const res = await axios.get('https://ecoexplorer-www0.onrender.com/api/admin/quizzes', {
           headers: { Authorization: `Bearer ${token}` }
         })
         setQuizzes(res.data)

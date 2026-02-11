@@ -8,7 +8,8 @@ export default function QuizHome() {
   useEffect(() => {
     const fetchQuizzes = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/quiz')
+        // const res = await axios.get('http://localhost:5000/api/quiz')
+        const res = await axios.get('https://ecoexplorer-www0.onrender.com/api/quiz')
         setQuizzes(res.data)
       } catch (err) {
         console.error('Failed to fetch quizzes:', err)

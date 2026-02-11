@@ -165,6 +165,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
   const { user, logout } = useAuth()
   const navigate = useNavigate()
+  const firstName = user?.fullName?.split(' ')[0] || "User";
 
   const handleQuizClick = () => {
     if (user) {
@@ -235,7 +236,7 @@ export default function Navbar() {
 
           {user ? (
             <>
-              <span className="text-green-800">👋 {user.fullName.split(' ')[0]}</span>
+              <span className="text-green-800">👋 {firstName}</span>
               <button
                 onClick={handleLogout}
                 className="px-3 py-1.5 bg-red-100 text-red-600 rounded hover:bg-red-200"
@@ -309,7 +310,7 @@ export default function Navbar() {
             {user ? (
               <>
                 <span className="block px-4 py-2 text-green-800 font-semibold">
-                  👋 {user.fullName.split(' ')[0]}
+                  👋 {firstName}
                 </span>
                 <button
                   onClick={() => {

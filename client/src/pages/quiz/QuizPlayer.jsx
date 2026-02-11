@@ -15,7 +15,8 @@ export default function QuizPlayer() {
   useEffect(() => {
     const fetchQuiz = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/quiz/${id}`)
+        // const res = await axios.get(`http://localhost:5000/api/quiz/${id}`)
+        const res = await axios.get(`https://ecoexplorer-www0.onrender.com/api/quiz/${id}`)
         setQuiz(res.data)
         setAnswers(new Array(res.data.questions.length).fill(null))
         setLoading(false)
@@ -49,7 +50,8 @@ export default function QuizPlayer() {
     try {
       const token = localStorage.getItem('token')
       const res = await axios.post(
-        `http://localhost:5000/api/quiz/submit/${id}`,
+        // `http://localhost:5000/api/quiz/submit/${id}`,
+        `https://ecoexplorer-www0.onrender.com/api/quiz/submit/${id}`,
         { answers },
         { headers: { Authorization: `Bearer ${token}` } }
       )
